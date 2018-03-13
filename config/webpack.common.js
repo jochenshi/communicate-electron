@@ -5,7 +5,7 @@ const APP_DIR = path.resolve(__dirname, '../src')
 
 const config = {
     entry: {
-        login: path.resolve(__dirname, '../src/modules/login/login.js'),
+        login: path.resolve(__dirname, '../src/modules/login/index.js'),
         app: path.resolve(__dirname, '../src/modules/main/index.js')
     },
     output: {

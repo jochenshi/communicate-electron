@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-import App from './app'
+import Login from './login'
 
 ReactDom.render(
     (
-        <App/>
+        <Login/>
     ),
-    document.getElementById('main-root')
+    document.getElementById('login-root')
 )
