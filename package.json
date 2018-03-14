@@ -2,15 +2,18 @@
   "name": "communicate-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
     "build": "webpack --config=config/webpack.prod.js",
     "dev": "webpack-dev-server --config=config/webpack.dev.js --host 0.0.0.0 --port 3000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "antd": "^3.3.0",
+    "electron": "^1.8.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2"
@@ -30,6 +33,7 @@
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
+    "css-loader": "^0.28.7",
     "style-loader": "^0.18.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",

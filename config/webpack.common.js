@@ -4,6 +4,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const APP_DIR = path.resolve(__dirname, '../src')
 
 const config = {
+    node: {
+        fs: 'empty'
+    },
     entry: {
         login: path.resolve(__dirname, '../src/modules/login/index.js'),
         app: path.resolve(__dirname, '../src/modules/main/index.js')
