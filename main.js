@@ -8,7 +8,7 @@ let mainWindow, loginWindow;
 function createLogin () {
     loginWindow = new BrowserWindow({
         width: 300,
-        height: 300
+        height: 390
     });
     loginWindow.loadURL('http://127.0.0.1:3000/login.html')
     ipcMain.on('openMain', (event, arg) => {

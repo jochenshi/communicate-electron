@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-import Login from './login'
+import WrapperLogin from './login'
 
 ReactDom.render(
     (
-        <Login/>
+        <WrapperLogin/>
     ),
     document.getElementById('login-root')
 )
