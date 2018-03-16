@@ -10,7 +10,10 @@ import './login.styl'
 class Login extends Component {
     constructor (props) {
         super(props)
-        console.log('login constructor')
+        console.log('login constructor');
+        this.state = {
+            loading: false
+        }
     }
     componentDidMount () {
         //ipcRenderer.send('openMain')
@@ -19,7 +22,16 @@ class Login extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Receive form value', values)
+                console.log('Receive form value', values);
+                this.setState({
+                    loading: true
+                });
+                setTimeout(() => {
+                    ipcRenderer.send('openMain');
+                    this.setState({
+                        loading: false
+                    });
+                }, 3000)
             }
         })
     }
@@ -46,7 +58,7 @@ class Login extends Component {
                             )}
                         </FormItem>
                         <FormItem>
-                            <Button type="primary" className={'login-form-button'} htmlType={'submit'} disabled={true}>登录</Button>
+                            <Button type="primary" loading={this.state.loading} className={'login-form-button'} htmlType={'submit'}>登录</Button>
                         </FormItem>
                     </Form>
                 </div>

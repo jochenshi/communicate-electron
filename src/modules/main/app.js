@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 
-import MainHome from './test'
+import MainHome from './mainHome/mainHome'
+import './index.styl'
 
 class App extends Component {
     render () {

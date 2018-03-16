@@ -3,6 +3,8 @@ import ReactDom from 'react-dom'
 
 import App from './app'
 
+import '../../asset/icon/iconfont.css'
+
 ReactDom.render(
     (
         <App/>
